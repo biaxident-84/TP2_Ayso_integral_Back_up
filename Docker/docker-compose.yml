@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  web:
+    image: Ernesto/TP-Div_313_Grupo_TP2:latest
+    # image: compa1/TP-Div_3_Grupo_MiGrupoUtn:latest  # compañeros comentados
+    restart: unless-stopped
+    volumes:
+      - ./web/file/:/usr/share/nginx/html/file/
+    ports:
+      - '8081:80'
